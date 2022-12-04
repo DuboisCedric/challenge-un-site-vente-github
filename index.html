@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Concours page web de vente de produit, Décorations de noël et sapins"
+    />
+    <title>Vente de decoration de noël</title>
+    <link rel="icon" type="image/x-icon" href="./images/sapin-de-noel.png" />
+    <link rel="stylesheet" href="style.css" / >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+    <div class="home">
+      <nav>
+        <ul class="toggle-menu">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Sapins</a></li>
+          <li><a href="#">Décorations</a></li>
+          <li><a href="#">Tarifs</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="#" class="panier"
+              ><img src="./images/sac-de-courses.png" alt="panier" width="50" />
+            </a>
+          </li>
+        </ul>
+        <div class="btn-toggle-container" role="button">
+          <img
+            src="./ressources/hamburger-menu.svg"
+            alt="icone menu hamburger"
+          />
+        </div>
+      </nav>
+
+      <!-- Accueil -->
+
+      <div class="container">
+        <div class="logo-1"></div>
+        <div class="titre">
+          <h1 class="animation-greensock">La Boutique Du Père Noël</h1>
+        </div>
+        <div class="logo-2"></div>
+      </div>
+
+      <!--  -->
+
+      <div class="container-text-promo">
+        <div class="chronoPromo">
+          <!-- compte à rebours -->
+
+          <div class="container-box">
+            <div id="clock">
+              <h3 class="promos">NOS PROMOTIONS</h3>
+              <h2>Promotion de 15%</h2>
+              <p class="texte-promos">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+                sunt cupiditate eum odio aspernatur at tempora corrupti, nam in
+                doloremque blanditiis quisquam, reiciendis et Quia adipisci
+                voluptatum vitae excepturi ratione?
+              </p>
+              <h4 class="fin-promos">Fin De La Promotion</h4>
+              <div id="time">
+                <div><span class="days">00</span><span>Jours</span></div>
+                <div><span class="hours">00</span><span>Heures</span></div>
+                <div><span class="minutes">00</span><span>Minutes</span></div>
+                <div><span class="seconds">00</span><span>Secondes</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="imagePereNoel">
+          <div class="date">
+            <div>
+              <span class="jours">dimanche 12 décembre 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <!-- produits gauche -->
+    <div class="produit-container">
+      <div class="produit-images">
+        <!-- Image grand format -->
+        <div class="full-img-container">
+          <img
+            src="./images/bauble-g4345c7496_1920.png"
+            alt="boule de noël rose"
+            id="full"
+          />
+        </div>
+        <!-- Vignettes petit format -->
+        <div class="vignettes-container">
+          <img
+            src="./images/bauble-gba1e87295_1920.png"
+            alt="boule de noël"
+            class="small"
+          />
+          <img
+            src="./images/bauble-g4345c7496_1920.png"
+            alt="boule de noël"
+            class="small"
+          />
+          <img
+            src="./images/bauble-g92967cc9d_1920.png"
+            alt="boule de noël"
+            class="small"
+          />
+          <img
+            src="./images/bauble-gbd64954ed_1920.png"
+            alt="boule de noël"
+            class="small"
+          />
+        </div>
+      </div>
+      <!-- Produits infos right -->
+      <div class="produit-infos">
+        <h1 class="produit-titre">Magnifique Boule de noël</h1>
+        <p class="produit-prix">2.50€ L'unité</p>
+        <p class="description">
+          🎄 De magnifiques boules de Noël donneront à votre sapin de Noël un
+          aspect très spécial. Facile à accrocher le haut de chaque boule
+          décorative est équipé d'un crochet détachable avec une corde en
+          dentelle, éliminant le besoin d'enfilage séparé, ce qui est pratique
+          pour accrocher.
+        </p>
+        <p class="panier-container"></p>
+        <button class="btn-add">
+          <img
+            src="./images/panier.png"
+            alt="panier"
+            width="30"
+            class="panier"
+          />
+          AJOUTER AU PANIER
+        </button>
+      </div>
+    </div>
+
+    <!-- modal -->
+
+    <div class="modal">
+      <div class="total-facture">
+        <span class="fermer-page">&times;</span>
+        <p class="facture">Votre facture : 0€</p>
+        <p class="texte-facture"></p>
+        <button class="validez">Validez</button>
+        <button class="annuler">Annuler</button>
+      </div>
+    </div>
+
+    <!-- section cartes -->
+    <section class="cartes">
+      <h2 class="section-shop">Nos Décorations & Nos Sapins</h2>
+
+      <div class="gallerie">
+        <div class="item">
+          <img
+            src="./images/christmas-balls-gaabd0e516_1280.jpg"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 4.75€</h4></div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="./images/christmas-g4c5a104ea_1280.jpg"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 1.50€</h4></div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="./images/christmas-g574ef0362_1280.jpg"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 7.99€</h4></div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img src="./images/emotions-g2696f9572_1280.jpg" alt="déco de noel" />
+          <div class="gallerie-prix"><h4>Prix 12.20€</h4></div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="./images/christmas-tree-gd213a07a6_1280.png"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 40€</h4></div>
+          <div class="taille-sapin">Taille 120 cm</div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="./images/christmas-tree-gd213a07a6_1280.png"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 50€</h4></div>
+          <div class="taille-sapin">Taille 140 cm</div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="./images/christmas-tree-gd213a07a6_1280.png"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 60€</h4></div>
+          <div class="taille-sapin">Taille 150 cm</div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="./images/christmas-tree-gd213a07a6_1280.png"
+            alt="déco de noel"
+          />
+          <div class="gallerie-prix"><h4>Prix 70€</h4></div>
+          <div class="taille-sapin">Taille 180 cm</div>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              reprehenderit!
+            </p>
+          </div>
+          <div class="ajouter-panier">
+            <img src="./images/panier.png" alt="panier" width="10px" />
+            <input
+              type="number"
+              name="nombre"
+              id="nombre"
+              width="10"
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal promos -->
+
+    <div class="popup">
+      <div class="containerBox">
+        <div class="close"></div>
+        <div class="imgBox">
+          <img src="./images/sapin-de-noel.png" alt="cadeaux" />
+        </div>
+        <div class="content">
+          <div>
+            <h3>Offre Spécial</h3>
+            <h2><span>Réduction de </span>25<sub>%</sub></h2>
+            <p>Achetez 10 boules de noël pour obtenir cette réduction</p>
+            <a href="#">Obtenez l’offre</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+
+    <section class="contact">
+      <h2>Formulaire d'enregistrement</h2>
+      <form action="#">
+        <div class="form-grid">
+          <div>
+            <label for="name">Nom</label>
+            <input type="text" id="name" placeholder="Cédric" />
+          </div>
+          <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" placeholder="Dubois" />
+          </div>
+          <div>
+            <label for="mdp">Mot De Passe</label>
+            <input type="password" id="mdp" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="cedric@gmail.com" />
+          </div>
+
+          <div class="textarea">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              cols="30"
+              rows="5"
+              placeholder="Votre message ici..."
+            ></textarea>
+          </div>
+        </div>
+        <input type="submit" class="button" value="Validez" />
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div>
+          <h4>La Boutique Du Père Noël</h4>
+          <p>
+            25 Avenue du grand nord - Pôle Nord <br />
+            <span>Tel : 09 25 12 20 22</span>
+          </p>
+          <p>
+            <button>Nous contacter</button>
+          </p>
+          <p>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </p>
+        </div>
+        <div>
+          <h4>Horaires d'ouverture</h4>
+          <p>
+            Nous vous accueillons dans la boutique,<br />
+            midi et soir, tous les jours,<br />
+            sauf le samedi midi et dimanche.
+          </p>
+          <p>Les weekends le Père Noêl boit sont chocolat chaud.</p>
+          <p>
+            <a href="#"><i class="fas fa-home-user"></i></a>
+          </p>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p>
+            Inscrivez-vous et recevez par mail <br />
+            les dernières informations du Père Noël.
+          </p>
+          <p>
+            <button>S'inscrire</button>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-nav">
+      <div class="navigation-down-footer">
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Plan du site</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© Copyright 2022 La Boutique Du Père Noël. Tous droits réservés.</p>
+        <p>coding by Dubois Cédric</p>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
